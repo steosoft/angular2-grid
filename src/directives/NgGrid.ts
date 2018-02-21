@@ -734,14 +734,14 @@ export class NgGrid implements OnInit, DoCheck, OnDestroy {
 			var itemPos = this._draggingItem.getGridPosition();
 
 			this._draggingItem.setGridPosition(itemPos);
-			this._addToGrid(this._draggingItem);
+			//this._addToGrid(this._draggingItem);
 
 			this._cascadeGrid();
 			this._updateSize();
 			this._filterGrid();
 
 			this._draggingItem.stopMoving();
-			this._draggingItem.onDragStopEvent();
+			//this._draggingItem.onDragStopEvent();
 			this.onDragStop.emit(this._draggingItem);
 			this._draggingItem = null;
 			this._posOffset = null;
@@ -762,14 +762,14 @@ export class NgGrid implements OnInit, DoCheck, OnDestroy {
 			var itemDims = this._resizingItem.getSize();
 
 			this._resizingItem.setSize(itemDims);
-			this._addToGrid(this._resizingItem);
+			//this._addToGrid(this._resizingItem);
 
 			this._cascadeGrid();
 			this._updateSize();
 			this._filterGrid();
 
 			this._resizingItem.stopMoving();
-			this._resizingItem.onResizeStopEvent();
+			//this._resizingItem.onResizeStopEvent();
 			this.onResizeStop.emit(this._resizingItem);
 			this._resizingItem = null;
 			this._resizeDirection = null;
